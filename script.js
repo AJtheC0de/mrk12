@@ -2,6 +2,7 @@ const header = document.querySelector("[data-nav]");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".site-nav a");
 const anchorLinks = document.querySelectorAll('a[href^="#"]');
+const downloadLinks = document.querySelectorAll("[data-download-link]");
 const revealItems = document.querySelectorAll(".reveal");
 const faqItems = document.querySelectorAll(".faq-list details");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -77,6 +78,18 @@ anchorLinks.forEach((link) => {
 
     smoothScrollTo(Math.max(targetY, 0));
     window.history.pushState(null, "", href);
+  });
+});
+
+downloadLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (typeof window.plausible !== "function") return;
+
+    window.plausible("App Store Download Click", {
+      props: {
+        location: link.dataset.downloadLocation || "Unknown",
+      },
+    });
   });
 });
 
