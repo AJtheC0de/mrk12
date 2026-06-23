@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Marook turns highlighted book pages into clear AI explanations, flashcards, and a searchable knowledge library."
+    />
+    <title>Marook - Turn Books Into Knowledge</title>
+    <link rel="icon" href="assets/marook-icon.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter+Tight:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" data-nav>
+        <a class="brand" href="#top" aria-label="Marook homepage">
+          <img src="assets/marook-icon.jpg" alt="" />
+          <span>Marook</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+          <span class="nav-toggle-text">Menu</span>
+        </button>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#solution">Solution</a>
+          <a href="#features">Features</a>
+          <a href="#how">How it works</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a
+          class="header-cta"
+          href="https://apps.apple.com/us/app/marook/id6774602986"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Download
+        </a>
+      </header>
+
+      <main id="top">
+        <section class="hero section-pad">
+          <div class="hero-copy reveal">
+            <div class="eyebrow">
+              <span class="pulse"></span>
+              For readers, students, and lifelong learners
+            </div>
+            <h1>Turn highlighted book pages into lasting knowledge.</h1>
+            <p>
+              Marook scans your highlights, extracts important passages, and
+              turns them into clear AI explanations, flashcards, and a personal
+              knowledge library.
+            </p>
+            <div class="cta-row">
+              <a
+                class="app-store-link"
+                href="https://apps.apple.com/us/app/marook/id6774602986"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Download Marook on the App Store"
+              >
+                <img
+                  src="assets/app-store-badge.svg"
+                  alt="Download on the App Store"
+                />
+              </a>
+            </div>
+            <div class="hero-proof" aria-label="App Details">
+              <span>Free</span>
+              <span>iOS 15.1+</span>
+              <span>Ages 4+</span>
+              <span>Education</span>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="Marook app preview">
+            <div class="mockup-stage">
+              <img
+                class="mockup mockup-back"
+                src="assets/Scan.png"
+                alt="Marook scan screenshot on iPhone"
+              />
+              <img
+                class="mockup mockup-front"
+                src="assets/Home.png"
+                alt="Marook home screenshot on iPhone"
+              />
+              <div class="floating-note note-one">
+                <span>Scan</span>
+                1 highlight found
+              </div>
+              <div class="floating-note note-two">
+                <span>Review</span>
+                Card ready
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="trust-strip reveal" aria-label="Trust signals">
+          <span>Built for focused learning</span>
+          <div class="trust-items">
+            <strong>AI explanations</strong>
+            <strong>Flashcards</strong>
+            <strong>Searchable library</strong>
+            <strong>iPhone App</strong>
+          </div>
+        </section>
+
+        <section class="problem section-pad reveal" id="problem">
+          <div class="problem-layout">
+            <div class="section-heading">
+              <span class="kicker">The problem</span>
+              <h2>Your book is full of great ideas. Your memory is not.</h2>
+              <p>
+                Highlighting is easy. Remembering what you highlighted takes a
+                second step. That is where many readers lose their best ideas.
+              </p>
+            </div>
+            <div class="lost-highlight" aria-hidden="true">
+              <span class="paper-line long"></span>
+              <span class="paper-line"></span>
+              <mark>I meant to remember this idea.</mark>
+              <span class="paper-line short"></span>
+              <div class="fade-chip">Two weeks later?</div>
+            </div>
+          </div>
+          <div class="problem-grid">
+            <article class="problem-card">
+              <div class="problem-icon">Book</div>
+              <span>Stuck in the book</span>
+              <h3>Highlights stay on the page</h3>
+              <p>
+                Important thoughts end up on paper, but rarely make it into
+                your active memory.
+              </p>
+            </article>
+            <article class="problem-card featured">
+              <div class="problem-icon">Timer</div>
+              <span>Too much friction</span>
+              <h3>Notes take too much time</h3>
+              <p>
+                Typing, sorting, and explaining ideas interrupts the reading
+                flow and quickly gets postponed.
+              </p>
+            </article>
+            <article class="problem-card">
+              <div class="problem-icon">Loop</div>
+              <span>No review loop</span>
+              <h3>Review never happens</h3>
+              <p>
+                Without a review system, even strong ideas become blurry after
+                a few days.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="solution section-pad" id="solution">
+          <div class="solution-panel reveal">
+            <div>
+              <span class="kicker">The solution</span>
+              <h2>Scan. Understand. Remember.</h2>
+              <p>
+                Marook turns a highlighted page into a structured learning
+                moment: capture the text, understand the meaning, save it as a
+                card, and review it later.
+              </p>
+            </div>
+            <div class="solution-flow" aria-label="Marook workflow">
+              <div><span>1</span>Scan a highlight</div>
+              <div><span>2</span>AI explains the context</div>
+              <div><span>3</span>Save it as a flashcard</div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="testimonials section-pad reveal"
+          aria-label="Testimonials"
+        >
+          <div class="section-heading compact">
+            <span class="kicker">Testimonials</span>
+            <h2>This is how learning should feel.</h2>
+          </div>
+          <div class="testimonial-grid">
+            <article>
+              <div class="avatar">LA</div>
+              <div class="stars">★★★★★</div>
+              <p>
+                "I read at night, scan my highlights in the morning, and have
+                material ready for the next session. It finally does not feel
+                like note-taking work."
+              </p>
+              <strong>Lina A.</strong>
+              <span>Medical student · uses Marook after every chapter</span>
+            </article>
+            <article>
+              <div class="avatar accent">MK</div>
+              <div class="stars">★★★★★</div>
+              <p>
+                "The AI explanation turns a beautiful quote into a clear idea.
+                I remember not just the sentence, but why it mattered."
+              </p>
+              <strong>Marco K.</strong>
+              <span>Nonfiction reader · building a knowledge library</span>
+            </article>
+            <article>
+              <div class="avatar warm">SN</div>
+              <div class="stars">★★★★★</div>
+              <p>
+                "My highlights used to be scattered everywhere. Now I open
+                Marook and instantly find the card I need for a presentation."
+              </p>
+              <strong>Sara N.</strong>
+              <span>Product manager · reviews before meetings</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="features section-pad" id="features">
+          <div class="section-heading reveal">
+            <span class="kicker">Features & benefits</span>
+            <h2>Everything you need to turn reading into active knowledge.</h2>
+          </div>
+
+          <div class="feature-row reveal">
+            <div class="feature-copy">
+              <span>Scan</span>
+              <h3>Capture your highlights in seconds.</h3>
+              <p>
+                Point the camera at a book or study page and save relevant
+                passages without typing them out.
+              </p>
+            </div>
+            <div class="feature-phone">
+              <img src="assets/Scan.png" alt="Marook scan screenshot" />
+            </div>
+          </div>
+
+          <div class="feature-row reverse reveal">
+            <div class="feature-copy">
+              <span>Understand</span>
+              <h3>Understand difficult ideas faster.</h3>
+              <p>
+                AI explanations turn highlighted passages into clear,
+                reviewable summaries with the core idea intact.
+              </p>
+            </div>
+            <div class="feature-phone">
+              <img
+                src="assets/Save_Ai_Explanation_Cards.png"
+                alt="Marook AI explanation and save card screenshot"
+              />
+            </div>
+          </div>
+
+          <div class="feature-row reveal">
+            <div class="feature-copy">
+              <span>Organize</span>
+              <h3>Keep every highlight tied to the right book.</h3>
+              <p>
+                Add your books, collect highlights by title, and find ideas
+                later exactly where they came from.
+              </p>
+            </div>
+            <div class="feature-phone">
+              <img
+                src="assets/Add_Books.png"
+                alt="Marook add books screenshot"
+              />
+            </div>
+          </div>
+
+          <div class="benefit-grid reveal">
+            <div>
+              <h3>Nothing gets lost</h3>
+              <p>
+                Save ideas in one personal library instead of scattered note
+                apps.
+              </p>
+            </div>
+            <div>
+              <h3>Review instead of forgetting</h3>
+              <p>Flashcards turn passive reading into active recall.</p>
+            </div>
+            <div>
+              <h3>More value from every page</h3>
+              <p>
+                Every good highlight becomes a small building block in your
+                knowledge system.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="how section-pad reveal" id="how">
+          <div class="section-heading compact">
+            <span class="kicker">How it works</span>
+            <h2>Get started in three simple steps.</h2>
+          </div>
+          <div class="steps">
+            <article>
+              <span>01</span>
+              <h3>Download the app</h3>
+              <p>Install Marook for free on your iPhone.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Scan a page</h3>
+              <p>
+                Capture book pages, scripts, or study material with highlighted
+                passages.
+              </p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Save the knowledge</h3>
+              <p>
+                Get explanations, save cards, and review the ideas that matter.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="faq section-pad" id="faq">
+          <div class="section-heading reveal">
+            <span class="kicker">FAQ</span>
+            <h2>Answers before you download.</h2>
+          </div>
+          <div class="faq-list reveal">
+            <details open>
+              <summary>Does Marook cost anything?</summary>
+              <p>
+                The download is free. According to the App Store, free users get
+                10 AI uses; Premium includes 150 AI uses per month.
+              </p>
+            </details>
+            <details>
+              <summary>Who is Marook for?</summary>
+              <p>
+                For readers, students, and anyone who wants to remember more
+                from books, study pages, or learning material.
+              </p>
+            </details>
+            <details>
+              <summary>Is Marook available on other platforms?</summary>
+              <p>Marook is currently available as an iPhone app.</p>
+            </details>
+            <details>
+              <summary>Which iOS version do I need?</summary>
+              <p>Marook requires iOS 15.1 or later.</p>
+            </details>
+            <details>
+              <summary>What happens to my data?</summary>
+              <p>
+                Privacy details are available in the App Store and in the
+                developer's linked privacy policy.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <section class="final-cta section-pad reveal">
+          <div class="final-card">
+            <img src="assets/marook-icon.jpg" alt="" />
+            <h2>Your next highlight should not disappear.</h2>
+            <p>
+              Download Marook and turn reading into a system you can return to
+              anytime.
+            </p>
+            <div class="cta-row center">
+              <a
+                class="app-store-link"
+                href="https://apps.apple.com/us/app/marook/id6774602986"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Download Marook on the App Store"
+              >
+                <img
+                  src="assets/app-store-badge.svg"
+                  alt="Download on the App Store"
+                />
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <img src="assets/marook-icon.jpg" alt="" />
+          <div>
+            <strong>Marook</strong>
+            <span>Turn Books Into Knowledge</span>
+          </div>
+        </div>
+        <nav aria-label="Footer Navigation">
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+          <a
+            href="https://uneven-chickadee-d15.notion.site/marook-app-3739581121fd8008b083e7d239c9b919"
+            target="_blank"
+            rel="noreferrer"
+            >Developer Website</a
+          >
+          <a
+            href="https://uneven-chickadee-d15.notion.site/Privacy-Policy-3739581121fd803ca04bc878f6da9dfa"
+            target="_blank"
+            rel="noreferrer"
+            >Privacy Policy</a
+          >
+          <a
+            href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+            target="_blank"
+            rel="noreferrer"
+            >EULA</a
+          >
+        </nav>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
