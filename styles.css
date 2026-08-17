@@ -81,28 +81,36 @@ a {
 .site-header {
   position: fixed;
   z-index: 50;
-  top: 18px;
+  top: 0;
   left: 50%;
-  width: min(1180px, calc(100% - 32px));
-  height: 68px;
+  width: 100%;
+  height: 88px;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 10px 12px 10px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: 999px;
-  background: rgba(255, 250, 240, 0.76);
-  box-shadow: 0 14px 40px rgba(20, 24, 50, 0.11);
-  backdrop-filter: blur(22px);
-  transition: background 0.2s ease, box-shadow 0.2s ease, top 0.2s ease;
+  padding: 10px max(20px, calc((100vw - 1180px) / 2));
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 0;
+  background: rgba(255, 253, 246, 0);
+  box-shadow: 0 0 0 rgba(20, 24, 50, 0);
+  backdrop-filter: blur(0px);
+  transition: top 0.35s ease, width 0.35s ease, height 0.35s ease,
+    padding 0.35s ease, border-radius 0.35s ease, border-color 0.35s ease,
+    background 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease;
 }
 
 .site-header.scrolled {
-  top: 10px;
+  top: 14px;
+  width: min(1180px, calc(100% - 32px));
+  height: 68px;
+  padding: 10px 12px 10px 14px;
+  border-color: rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 14px 44px rgba(20, 24, 50, 0.17);
+  backdrop-filter: blur(22px);
 }
 
 .brand,
@@ -165,12 +173,19 @@ a {
 }
 
 .hero {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(380px, 1.05fr);
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 44px;
-  padding-top: 140px;
+  gap: 56px;
+  padding-top: 160px;
+  text-align: center;
+}
+
+.hero-copy {
+  width: min(760px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-copy,
@@ -202,34 +217,42 @@ a {
 }
 
 .hero h1 {
-  margin: 18px 0 0;
+  width: min(720px, 100%);
+  margin: 20px 0 0;
   color: var(--ink);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--type-hero);
-  line-height: 0.96;
-  letter-spacing: 0;
-  font-weight: 700;
+  line-height: 1.03;
+  letter-spacing: -0.01em;
+  font-weight: 800;
+}
+
+.hero h1 .hl {
+  position: relative;
+  padding: 0 0.12em;
+  border-radius: 0.2em;
+  background: linear-gradient(180deg, transparent 46%, var(--gold) 46%, var(--gold) 96%, transparent 96%);
+  color: inherit;
+  font-weight: 800;
 }
 
 .hero p {
-  width: min(620px, 100%);
+  width: min(560px, 100%);
   margin: 22px 0 0;
   color: #434965;
   font-size: var(--type-body-lg);
   line-height: 1.55;
   font-weight: 450;
+  text-align: center;
 }
 
 .cta-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 14px;
   margin-top: 34px;
-}
-
-.cta-row.center {
-  justify-content: center;
 }
 
 .app-store-link {
@@ -317,6 +340,7 @@ a {
 .hero-proof {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   margin-top: 24px;
 }
@@ -333,15 +357,15 @@ a {
 
 .hero-visual {
   position: relative;
-  min-height: 650px;
+  width: 100%;
   display: grid;
   place-items: center;
 }
 
 .mockup-stage {
   position: relative;
-  width: min(610px, 100%);
-  height: 690px;
+  width: min(760px, 100%);
+  height: clamp(520px, 56vw, 700px);
   display: grid;
   place-items: center;
   isolation: isolate;
@@ -350,37 +374,39 @@ a {
 .mockup-stage::before {
   content: "";
   position: absolute;
-  inset: 70px 26px 58px;
+  inset: 6% 4% 4%;
   z-index: -1;
-  border-radius: 42% 58% 52% 48%;
+  border-radius: 48px;
   background:
-    radial-gradient(circle at 34% 28%, rgba(255, 111, 97, 0.24), transparent 28%),
-    radial-gradient(circle at 74% 30%, rgba(49, 83, 244, 0.18), transparent 30%),
-    linear-gradient(135deg, rgba(234, 247, 255, 0.7), rgba(248, 226, 223, 0.42));
-  filter: blur(4px);
+    radial-gradient(circle at 30% 22%, rgba(255, 111, 97, 0.22), transparent 40%),
+    radial-gradient(circle at 76% 34%, rgba(49, 83, 244, 0.16), transparent 42%),
+    radial-gradient(circle at 40% 82%, rgba(255, 212, 93, 0.2), transparent 44%),
+    linear-gradient(150deg, rgba(234, 247, 255, 0.65), rgba(248, 226, 223, 0.38));
+  filter: blur(6px);
 }
 
 .mockup {
   position: absolute;
-  width: min(340px, 63vw);
+  width: min(320px, 42vw);
   height: auto;
   filter: drop-shadow(0 34px 52px rgba(16, 21, 18, 0.2));
   user-select: none;
 }
 
 .mockup-front {
-  right: 34px;
-  top: 4px;
+  right: 8%;
+  top: 0;
   z-index: 2;
   transform: rotate(3deg);
 }
 
 .mockup-back {
-  left: 24px;
-  bottom: 18px;
+  left: 4%;
+  bottom: 0;
   z-index: 1;
-  transform: rotate(-9deg) scale(0.9);
-  opacity: 0.92;
+  width: min(250px, 34vw);
+  transform: rotate(-10deg);
+  opacity: 0.95;
 }
 
 .floating-note {
@@ -388,11 +414,11 @@ a {
   z-index: 4;
   display: grid;
   gap: 3px;
-  min-width: 148px;
-  padding: 14px 16px;
+  min-width: 150px;
+  padding: 14px 18px;
   border: 1px solid rgba(255, 255, 255, 0.74);
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.78);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.85);
   box-shadow: 0 18px 42px rgba(20, 24, 50, 0.13);
   backdrop-filter: blur(16px);
   color: var(--ink);
@@ -407,13 +433,84 @@ a {
 }
 
 .note-one {
-  top: 155px;
-  left: 22px;
+  top: 38%;
+  left: 0;
+  transform: translateX(-14%);
 }
 
 .note-two {
-  right: 0;
-  bottom: 132px;
+  right: 6%;
+  bottom: 6%;
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    min-height: clamp(760px, 88vh, 940px);
+    justify-content: center;
+    gap: 0;
+    overflow: visible;
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 5;
+    width: min(600px, 44vw);
+  }
+
+  .hero-visual {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: block;
+    pointer-events: none;
+  }
+
+  .mockup-stage {
+    position: static;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .mockup-stage::before {
+    content: none;
+  }
+
+  .mockup-front {
+    right: clamp(20px, 6vw, 130px);
+    left: auto;
+    bottom: auto;
+    top: clamp(100px, 13vh, 160px);
+    width: min(380px, 22vw);
+    transform: rotate(6deg);
+  }
+
+  .mockup-back {
+    left: clamp(20px, 6vw, 130px);
+    right: auto;
+    top: auto;
+    bottom: clamp(50px, 10vh, 120px);
+    width: min(310px, 18vw);
+    transform: rotate(-9deg);
+  }
+
+  .note-one {
+    top: auto;
+    bottom: clamp(120px, 22vh, 230px);
+    left: clamp(200px, 22vw, 380px);
+    transform: none;
+  }
+
+  .note-two {
+    top: auto;
+    bottom: clamp(70px, 14vh, 150px);
+    right: clamp(120px, 15vw, 260px);
+  }
 }
 
 .trust-strip {
@@ -1132,14 +1229,8 @@ a {
   }
 
   .hero {
-    min-height: auto;
-    grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 40px;
     padding-top: 126px;
-  }
-
-  .hero-visual {
-    min-height: 660px;
   }
 
   .trust-strip,
@@ -1212,14 +1303,17 @@ a {
   .section-pad,
   .trust-strip,
   .final-cta,
-  .site-footer,
-  .site-header {
+  .site-footer {
     width: calc(100% - 28px);
   }
 
   .site-header {
-    height: 62px;
-    top: 10px;
+    height: 74px;
+    padding: 10px 14px;
+  }
+
+  .site-header.scrolled {
+    height: 60px;
   }
 
   .brand img {
@@ -1241,7 +1335,6 @@ a {
 
   .eyebrow {
     max-width: 100%;
-    align-items: flex-start;
   }
 
   .cta-row,
