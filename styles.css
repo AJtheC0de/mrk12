@@ -1261,8 +1261,11 @@ em {
   max-width: 22rem;
 }
 
-.motion .gallery-viewport {
-  overflow: visible;
+/* Desktop only: GSAP drives the track there. Touch keeps native swipe. */
+@media (min-width: 900px) {
+  .motion .gallery-viewport {
+    overflow: visible;
+  }
 }
 
 /* ==========================================================================
